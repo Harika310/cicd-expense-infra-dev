@@ -10,7 +10,7 @@ terraform {
     bucket = "expense-infra-dev"
     key    = "expense-certificate"
     region = "us-east-1"
-    dynamodb_table = "expense-infra-dev"
+    dynamodb_table = "expense-infra-dev-locking"
   }
 
 
