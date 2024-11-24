@@ -7,10 +7,10 @@ terraform {
   }
      
     backend "s3" {
-    bucket = "harika-remote-state"
+    bucket = "expense-infra-dev"
     key    = "expense-sg"
     region = "us-east-1"
-    dynamodb_table = "devops-locking"
+    dynamodb_table = "expense-infra-dev"
   }
 
 
