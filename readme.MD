@@ -81,14 +81,8 @@ aws iam create-policy \
 ```
 * Create Service account. Replace your account ID.
 ```
-eksctl create iamserviceaccount \
---cluster=expense-dev \
---namespace=kube-system \
---name=aws-load-balancer-controller \
---attach-policy-arn=arn:aws:iam::315069654700:policy/AWSLoadBalancerControllerIAMPolicy \
---override-existing-serviceaccounts \
---region us-east-1 \
---approve
+ eksctl create iamserviceaccount --cluster=expense-dev --namespace=kube-system --name=aws-load-balancer-controller --attach-policy-arn=arn:aws:iam::905418172435:policy/AWSLoadBalancerControllerIAMPolicy --override-existing-serviceaccounts --region us-east-1 --approve
+
 ```
 
 * Install aws load balancer controller drivers through helm.
